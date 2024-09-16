@@ -6,9 +6,10 @@
     }
 
     .main {
+        background-color:bisque;
+        color: black;
         display: flex;
         flex-direction: column;
-        background-color: aquamarine;
         padding: 15px;
         gap: 20px;
         width: max-content;
@@ -47,6 +48,21 @@
 
     .term_btn:active {
         background-color: rgb(219, 219, 207);
+        border-radius: 40%;
+    }
+
+    .night {
+        margin-left: 30%;
+        cursor: pointer;
+        background-color: #ffffff48;
+        outline-style: none;
+        border-style: none;
+        border-radius: 4px;
+    }
+
+    .dark {
+        background-color: rgb(26, 24, 24);
+        color: white;
     }
 </style>
 <html>
@@ -60,7 +76,9 @@
 
 <body>
     <div class='main'>
-        <h1 style="text-align: center; font-weight: 400;">Simple Calculator</h1>
+        <h1 style="text-align: center; font-weight: 400;">Simple Calculator<img onclick="theme()" class='night'
+                width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/moon-symbol.png" alt="moon-symbol" />
+        </h1>
         <input id='output'>
         <div class='terms'>
             <button class='term_btn' onclick="clear_disp()">AC</button>
@@ -73,20 +91,20 @@
             <button class='term_btn' onclick="disp_num('9')">9</button>
             <button class='term_btn' onclick="disp_num('*')">x</button>
 
-            <button class='term_btn'onclick="disp_num('4')">4</button>
-            <button class='term_btn'onclick="disp_num('5')">5</button>
-            <button class='term_btn'onclick="disp_num('6')">6</button>
-            <button class='term_btn'onclick="disp_num('-')">-</button>
+            <button class='term_btn' onclick="disp_num('4')">4</button>
+            <button class='term_btn' onclick="disp_num('5')">5</button>
+            <button class='term_btn' onclick="disp_num('6')">6</button>
+            <button class='term_btn' onclick="disp_num('-')">-</button>
 
-            <button class='term_btn'onclick="disp_num('1')">1</button>
-            <button class='term_btn'onclick="disp_num('2')">2</button>
-            <button class='term_btn'onclick="disp_num('3')">3</button>
-            <button class='term_btn'onclick="disp_num('+')">+</button>
+            <button class='term_btn' onclick="disp_num('1')">1</button>
+            <button class='term_btn' onclick="disp_num('2')">2</button>
+            <button class='term_btn' onclick="disp_num('3')">3</button>
+            <button class='term_btn' onclick="disp_num('+')">+</button>
 
-            <button class='term_btn'onclick="disp_num('0')">0</button>
-            <button class='term_btn'onclick="disp_num('.')">.</button>
-            <button class='term_btn'onclick="rem_num()">del</button>
-            <button class='term_btn'onclick="final()">=</button>
+            <button class='term_btn' onclick="disp_num('0')">0</button>
+            <button class='term_btn' onclick="disp_num('.')">.</button>
+            <button class='term_btn' onclick="rem_num()">del</button>
+            <button class='term_btn' onclick="final()">=</button>
         </div>
     </div>
     <script src="sim_calc.js"></script>
