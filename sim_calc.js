@@ -15,3 +15,7 @@ function final() {
     output.value = "write something first";
   }
 }
+function theme(){
+  let element = document.querySelector('.main');
+  element.classList.toggle("dark");
+}
